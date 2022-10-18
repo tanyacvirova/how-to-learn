@@ -1,23 +1,3 @@
-header,
-h1,
-main,
-section,
-h2,
-h3,
-h4,
-p,
-a,
-ul,
-li,
-footer,
-nav {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -53,7 +33,9 @@ nav {
 }
 
 .header__title {
-  width: 730px;
+  box-sizing: border-box;
+  margin: 0;
+  max-width: 730px;
   font-size: 102px;
   font-weight: 600;
   line-height: 96px;
@@ -62,7 +44,8 @@ nav {
 }
 
 .header__subtitle {
-  width: 388px;
+  margin: 0;
+  max-width: 388px;
   font-size: 18px;
   font-weight: normal;
   line-height: 25px;
@@ -74,6 +57,7 @@ nav {
 
 .header__link {
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .header__main-illustration {
@@ -96,6 +80,7 @@ nav {
 }
 
 .description {
+  box-sizing: border-box;
   padding-top: 100px;
   display: flex;
   padding-bottom: 100px;
@@ -109,7 +94,8 @@ nav {
 }
 
 .two-columns__brief {
-  width: 175px;
+  margin: 0;
+  max-width: 175px;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
@@ -126,6 +112,7 @@ nav {
   line-height: 34px;
   font-weight: normal;
   margin-bottom: 30px;
+  margin-top: 0;
 }
 
 .two-columns__paragraph:last-of-type {
@@ -137,30 +124,32 @@ nav {
 }
 
 .digits {
+  box-sizing: border-box;
   padding-bottom: 100px;
 }
 
 .section-title {
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   margin-bottom: 20px;
   font-size: 60px;
   font-weight: 600;
   line-height: 1.15;
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 20px;
 }
 
 .section-subtitle {
-  width: 60%;
+  max-width: 60%;
   text-align: center;
   font-size: 24px;
   font-weight: normal;
   line-height: 34px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .table {
+  box-sizing: border-box;
   width: 1100px;
   margin: auto;
   display: flex;
@@ -171,41 +160,37 @@ nav {
 }
 
 .table__cell_theme_light {
+  box-sizing: border-box;
   width: 250px;
   margin-top: 60px;
 }
 
 .table__heading {
+  margin: 0;
   line-height: 1.15;
   font-size: 24px;
   font-weight: 600;
-  margin-bottom: 20px;
 }
 
 .table__text {
+  margin: 0;
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  padding-bottom: 20px;
-}
-
-.table__text:last-of-type {
-  padding-bottom: 0;
+  padding-top: 20px;
 }
 
 .feynman {
-  background-color: #f2f2f2;
-  background-image: url('../images/feynman.png');
-  background-repeat: no-repeat;
-  background-position: bottom left;
+  box-sizing: border-box;
+  background: #f2f2f2 url('../images/feynman.png') no-repeat bottom left;
   padding-top: 100px;
-  height: 890px;
+  min-height: 890px;
   position: relative;
 }
 
 .feynman__title {
-  width: 648px;
-  margin: auto;
+  max-width: 648px;
+  margin: 0 auto;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
@@ -214,7 +199,7 @@ nav {
 }
 
 .feynman__subtitle {
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
   line-height: 51px;
   font-size: 36px;
@@ -229,42 +214,43 @@ nav {
   font-size: 36px;
   font-weight: normal;
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .kaufman {
+  box-sizing: border-box;
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #1f1f1f;
   position: relative;
   overflow: hidden;
+  background-image: url('../images/kaufman-triangle.svg');
+  background-repeat: no-repeat;
+  background-position: right -210px top 0;
+  background-size: 877px 877px;
 }
 
 .section-title_theme_dark {
   color: white;
+  position: relative;
 }
 
 .section-subtitle_theme_dark {
   color: white;
+  position: relative;
 }
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
+  box-sizing: border-box;
   width: 200px;
   color: white;
   margin-right: 0;
   margin-top: 80px;
-  z-index: 2;
-}
-
-.kaufman__triangle {
-  width: 877px;
-  height: 877px;
-  position: absolute;
-  top: 0;
-  right: -210px;
 }
 
 .footer {
+  box-sizing: border-box;
   min-height: 350px;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -290,15 +276,17 @@ nav {
 }
 
 .footer__author {
+  margin: 0;
   color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   font-size: 18px;
   line-height: 25px;
   font-weight: normal;
 }
 
 .footer__column-heading {
+  margin: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
@@ -309,7 +297,8 @@ nav {
 .footer__column-links {
   list-style-type: none;
   padding-inline-start: 0;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .footer__social-icon {
@@ -321,4 +310,5 @@ nav {
   font-size: 18px;
   font-weight: normal;
   color: white;
+  text-decoration: none;
 }
