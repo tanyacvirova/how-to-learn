@@ -1,0 +1,9 @@
+.khan__quote {
+  max-width: 790px;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 34px;
+  margin-bottom: 36px;
+  margin-top: 50px;
+  box-sizing: content-box;
+}
